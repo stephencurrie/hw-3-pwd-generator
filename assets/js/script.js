@@ -90,29 +90,28 @@ function generatePwd(hasLower, hasUpper, hasNumeric, hasSpecial) { //<- NOT SURE
 }
 
 
-console.log(newArray);
+// console.log(newArray);
 
 
-
-// console.log(lowerCase);
-  
 // this creates a series of random indexes and then builds the array to the input length
-// this is just a place holder for now
 
-// LINES 81 - 90 ARE WORKING CODE
 
-//   for(let i = 0; i < passwordLength; i++) {
-//     let lowerIndex =  Math.floor(Math.random() * lowerCase.length);
-//     var lower = lowerCase[lowerIndex];
-//     generate.push(lower);
+
+   for(let i = 0; i < passwordLength; i++) {
+     let randomIndex =  Math.floor(Math.random() * newArray.length);
+     var random = newArray[randomIndex];
+     generate.push(random);                 //<- the array of the new password is "generate"
    
-// }
+}
 
+var newpwd = generate.join('');         //<- converts the generate array into a string 
 
-// console.log(generate);
+console.log(newpwd);
 
-  
+ 
 // this takes the output and places it on the website
+
+
 
 
 // this is the original code commented out for now
