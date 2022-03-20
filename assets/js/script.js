@@ -10,19 +10,70 @@
 
 // variables to store all the initial arrays
 
-var lowerCase = ["a","b","c","d"];
-var upperCase = ["A","B","C","D"];
+var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","X"];
 var numeric = [0, 1, 3, 4, 5, 6, 7, 8, 9];
-var specialChar = ["$","@","!","*"];
+var specialChar = ["!","@","$","*","#","!","%","(",")","+",",","-",".","/",":",";","<","=",">","?","}","^","{","~"];
 var generate = []; // <- this is the array that is the ouput that converts to the final one
 
 // variables to store the selection criteria
 
-var hasLower = '';
-var hasUpper = '';
-var hasNumeric = '';
-var hasSpecial = '';
-var passwordLength = 17; // <- minimum length = 8 maximum length = 128
+var hasLower = ''; // <- boolean
+var hasUpper = ''; // <- boolean
+var hasNumeric = ''; // <- boolean
+var hasSpecial = ''; // <- boolean
+var passwordLength = ''; // <- number minimum length = 8 maximum length = 128
+
+// use windows alerts to capture the criteria
+// lower case
+
+var hasLower = window.confirm("Do you want your password to contain lower case characters?")
+if (hasLower == true) {
+  window.alert("Your password will contain lower case characters")
+}
+else {
+  window.alert("Your password will not contain lower case characters")
+}
+
+// upper case
+
+var hasUpper = window.confirm("Do you want your password to contain upper case characters?")
+if (hasUpper == true) {
+  window.alert("Your password will contain upper case characters")
+}
+else {
+  window.alert("Your password will not contain upper case characters")
+}
+
+// numeric
+
+var hasNumeric = window.confirm("Do you want your password to contain numeric characters?")
+if (hasNumeric == true) {
+  window.alert("Your password will contain numeric characters")
+}
+else {
+  window.alert("Your password will not contain numeric case characters")
+}
+
+//special
+
+var hasSpecial = window.confirm("Do you want your password to contain special characters?")
+if (hasSpecial == true) {
+  window.alert("Your password contain special characters")
+}
+else {
+  window.alert("Your password will not contain special characters")
+}
+
+var passwordLength = window.prompt("Please enter the length of your password (between 8 and 128?");
+
+console.log(hasLower);
+console.log(hasUpper);
+console.log(hasNumeric);
+console.log(hasSpecial);
+console.log(passwordLength);
+
+
 
 // this builds the array based on the selection criteria
 // NEED TO BUILD THIS
@@ -30,15 +81,17 @@ var passwordLength = 17; // <- minimum length = 8 maximum length = 128
 // this creates a series of random indexes and then builds the array to the input length
 // this is just a place holder for now
 
-  for(let i = 0; i < passwordLength; i++) {
-    let lowerIndex =  Math.floor(Math.random() * lowerCase.length);
-    var lower = lowerCase[lowerIndex];
-    generate.push(lower);
+// LINES 81 - 90 ARE WORKING CODE
+
+//   for(let i = 0; i < passwordLength; i++) {
+//     let lowerIndex =  Math.floor(Math.random() * lowerCase.length);
+//     var lower = lowerCase[lowerIndex];
+//     generate.push(lower);
    
-}
+// }
 
 
-console.log(generate);
+// console.log(generate);
 
   
 // this takes the output and places it on the website
