@@ -14,6 +14,7 @@ var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","X"];
 var numeric = [0, 1, 3, 4, 5, 6, 7, 8, 9];
 var specialChar = ["!","@","$","*","#","!","%","(",")","+",",","-",".","/",":",";","<","=",">","?","}","^","{","~"];
+var newArray = []; // <- this is the array that is created from the inputs of all the selection criteria
 var generate = []; // <- this is the array that is the ouput that converts to the final one
 
 // variables to store the selection criteria
@@ -76,7 +77,24 @@ console.log(passwordLength);
 
 
 // this builds the array based on the selection criteria
-// NEED TO BUILD THIS
+
+password = generatePwd(hasLower, hasUpper, hasNumeric, hasSpecial);  //<- NOT SURE WHY
+
+function generatePwd(hasLower, hasUpper, hasNumeric, hasSpecial) { //<- NOT SURE WHY
+
+  if (hasLower) newArray = newArray.concat(lowerCase);
+  if (hasUpper) newArray = newArray.concat(upperCase);
+  if (hasNumeric) newArray = newArray.concat(numeric);
+  if (hasSpecial) newArray = newArray.concat(specialChar);
+  
+}
+
+
+console.log(newArray);
+
+
+
+// console.log(lowerCase);
   
 // this creates a series of random indexes and then builds the array to the input length
 // this is just a place holder for now
