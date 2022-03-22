@@ -16,7 +16,7 @@ var numeric = [0, 1, 3, 4, 5, 6, 7, 8, 9];
 var specialChar = ["!","@","$","*","#","!","%","(",")","+",",","-",".","/",":",";","<","=",">","?","}","^","{","~"];
 var newArray = []; // <- this is the array that is created from the inputs of all the selection criteria
 var generate = []; // <- this is the array that is the ouput that converts to the final one
-// var newPwd = ''  //<- NOT SURE IF I NEED THIS?
+
 
 // variables to store the selection criteria
 
@@ -81,9 +81,9 @@ console.log(passwordLength);
 
 // this builds the array based on the selection criteria
 
-password = generatePwd(hasLower, hasUpper, hasNumeric, hasSpecial);  //<- NOT SURE WHY
+password = generatePwd(hasLower, hasUpper, hasNumeric, hasSpecial);  
 
-function generatePwd(hasLower, hasUpper, hasNumeric, hasSpecial) { //<- NOT SURE WHY
+function generatePwd(hasLower, hasUpper, hasNumeric, hasSpecial) { 
 
   if (hasLower) newArray = newArray.concat(lowerCase);
   if (hasUpper) newArray = newArray.concat(upperCase);
@@ -96,7 +96,7 @@ function generatePwd(hasLower, hasUpper, hasNumeric, hasSpecial) { //<- NOT SURE
 
 
 
-// this creates a series of random indexes and then builds the array to the input length
+// this creates a series of random indexes and then builds the array to the input length.
 
 
 
@@ -115,35 +115,12 @@ return newpwd;
 }
 
 
- 
-// this takes the output and places it on the website
 
-
-// create a variables for things that require action - in this case the Generate Password button and the text field.  variables associate them with where they are in the html
-
-// var generateBtn = document.querySelector("#generate");
-// var passwordText = document.querySelector("#password");
-
-// Write password to the #password input.  
-
-
-// function writePassword(e) {
-
-
-// e.preventDefault();               //<- Prevent default action
-// passwordText.innterText = newPwd;    //<- CAN'T FIGURE OUT HOW TO WRITE TO HTML
-
-// }
-
-// generateBtn.addEventListener("click", writePassword); //<- When the generateBtn variable is clicked, run the writePassword function
-
-
-// this is the original code commented out for now
-
-// // Assignment Code
+// // Assignment Code - This selects the generateBtn in the HTML
 var generateBtn = document.querySelector("#generate");
 
- // Write password to the #password input
+ // Write password to the #password input - This writes all the code to get the password and store it in a variable called password.  it then takes the value of that password and writes it to passwordText and places it in the form in the HTML
+ 
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -152,5 +129,6 @@ function writePassword() {
 
 }
 
- // Add event listener to generate button
+ // Add event listener to generate button.  This kicks off the writePassword function that in turn kicks off the generatePassword function that starts all the code
+
 generateBtn.addEventListener("click", writePassword);
